@@ -8,7 +8,8 @@ Creación del tema con html y css
 
 Paso 2:
 Crear archivo style.css en la raiz del proyecto y agregar el siguiente codigo.
-``
+
+```
 /*
 Theme Name: Twenty Seventeen
 Theme URI: https://wordpress.org/themes/twentyseventeen/
@@ -23,7 +24,7 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-``
+```
 
 Paso 3:
 Crear screenshot.jpg de 600x400 y agregarlo a la raiz del proyecto, adicional el index.html cambiar a .php
