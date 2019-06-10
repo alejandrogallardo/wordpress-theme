@@ -3,10 +3,10 @@
 Documentación:
 https://developer.wordpress.org/themes/
 
-Paso 1:
+###Paso 1:
 Creación del tema con html y css
 
-Paso 2:
+###Paso 2:
 Crear archivo style.css en la raiz del proyecto y agregar el siguiente codigo.
 
 ```
@@ -26,10 +26,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 ```
 
-Paso 3:
+###Paso 3:
 Crear screenshot.jpg de 600x400 y agregarlo a la raiz del proyecto, adicional el index.html cambiar a .php
 
-Paso 4:
+###Paso 4:
 Crear archivo functions.php para agregar los diferentes soportes 
 
 ```
@@ -52,40 +52,42 @@ add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 <?php wp_footer(); ?> antes del cierre del body
 ```
 
-Paso 5:
+###Paso 5:
 Crear archivos footer.php y header.php con su correspondiente contenido
 
 y agregar las funciones
 
-````
+```
 <?php get_header(); ?>
 <?php get_footer(); ?> 
 ```
 
-Paso 6:
+###Paso 6:
 agregar el loop de wordpress
 Documentación
 https://developer.wordpress.org/themes/basics/the-loop/
-
+```
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     ... Display post content
 <?php endwhile; endif; ?>
 
 <?php the_time(F j, Y); ?>
-
-Paso 6:
+```
+###Paso 6:
 Crear archivo single.php con su respectivo contenido
 
-Paso 7:
+###Paso 7:
 Agregar soporte para las imagenes en functions.php
+```
 if ( function_exists( 'add_theme_support' ) ) {
         add_theme_support( 'post-thumbnails' );
      }
-
+```
 documentación
 https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 
 uso:
+```
 <?php
 if ( has_post_thumbnail() ) {
 the_post_thumbnail('post-thumbnails', array(
@@ -93,8 +95,8 @@ the_post_thumbnail('post-thumbnails', array(
 ));
 }
 ?>
-
-Paso 8:
+```
+###Paso 8:
 Agregar paginación
 - 1 Crear directorio template-parts
 - 2 Crear archivo content-paginacion.php y agregar el contenido del recurso
@@ -102,11 +104,12 @@ Recursos
 https://gist.github.com/mtx-z/f95af6cc6fb562eb1a1540ca715ed928
 
 uso:
+```
 <?php get_template_part('template-parts/content', 'paginacion'); ?>
-
-Paso 9:
+```
+###Paso 9:
 Agregar titulo dinamico
-
+```
 <?php 
             if ( is_home () ){
                 echo get_bloginfo('name');
@@ -116,10 +119,10 @@ Agregar titulo dinamico
                 echo get_bloginfo('name');
             }
         ?>
-
+```
 agregar en funciones add_theme_support('title-tag');
 
-Paso 10:
+###Paso 10:
 Agregar widgets
 
 Agregar soporte en functions.php
@@ -128,17 +131,17 @@ https://developer.wordpress.org/themes/functionality/sidebars/
 
 Crear archivo sidebar.php en root
 
-Paso 11: 
+###Paso 11: 
 Modificaciones del sidebar
 Agregar app.js en directorio js y registrarlo en functions.js
 con la funcion querySelector agregar nuevas clases
 
-Paso 12:
+###Paso 12:
 Agregar navbar dinamico
 Recurso utilizado
 https://github.com/wp-bootstrap/wp-bootstrap-navwalker
 https://developer.wordpress.org/themes/functionality/navigation-menus/
 Agregar al header
 
-Paso 13:
+###Paso 13:
 Agreagar page.php con casi el mismo contenido de single.php 
