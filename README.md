@@ -32,6 +32,7 @@ Crear screenshot.jpg de 600x400 y agregarlo a la raiz del proyecto, adicional el
 Paso 4:
 Crear archivo functions.php para agregar los diferentes soportes 
 
+```
 function add_theme_scripts() {
   wp_enqueue_style( 'style', get_stylesheet_uri() );
  
@@ -49,14 +50,17 @@ add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
 
 <?php wp_head(); ?> en el index abajo de title
 <?php wp_footer(); ?> antes del cierre del body
+```
 
 Paso 5:
 Crear archivos footer.php y header.php con su correspondiente contenido
 
 y agregar las funciones
 
+````
 <?php get_header(); ?>
 <?php get_footer(); ?> 
+```
 
 Paso 6:
 agregar el loop de wordpress
